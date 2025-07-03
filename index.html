@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENHYPEN | DESIRE:UNLEASH</title>
+
+  <!-- Styles & Libraries -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+</head>
+
+<body>
+  <!-- ⬆️ Header -->
+  <header class="header">
+    <h1>ENHYPEN</h1>
+    <nav>
+      <a href="#album">Album</a>
+      <a href="#versions">Versions</a>
+      <a href="#spotify">Spotify</a>
+      <a href="#fun">Fun Zone</a>
+      <a href="#mv">MV</a>
+    </nav>
+  </header>
+
+  <!-- 🎧 Hero Section -->
+  <section class="hero" id="album">
+    <div class="text">
+      <h2>DESIRE: <span>UNLEASH</span></h2>
+      <p class="subtitle">(ENHYPEN's 6th Mini Album)</p>
+      <p class="description">
+        Step into the night. ENHYPEN’s 6th Mini Album delves into a captivating, darker narrative,
+        exploring the raw intensity of desire finally set free. Featuring eight tracks including
+        ‘Loose’ and ‘Bad Desire (With or Without You)’.
+      </p>
+      <p class="release">Available Now • June 5, 2025</p>
+    </div>
+    <div class="album-cover tilt" id="albumImage">
+      <img src="images/Album cover.png" alt="ENHYPEN Album Cover" />
+    </div>
+  </section>
+
+  <!-- 💿 Album Versions -->
+  <section class="versions" id="versions">
+    <h3>Choose Your Version</h3>
+
+    <div class="version-selectors">
+      <button class="swatch" onclick="switchVersion('make')"></button>
+      <button class="swatch dark" onclick="switchVersion('you')"></button>
+      <button class="swatch red" onclick="switchVersion('mine')"></button>
+    </div>
+
+    <div class="version-info">
+      <div class="version-label" id="label-make">MAKE Version</div>
+      <div class="version-label hidden" id="label-you">YOU Version</div>
+      <div class="version-label hidden" id="label-mine">MINE Version</div>
+
+      <div class="version-desc" id="desc-make">
+        A sleek, angelic concept. Silver/white tones, representing restraint before desire unleashes.
+      </div>
+      <div class="version-desc hidden" id="desc-you">
+        Dark, elegant styling with black aesthetics. A mysterious yet seductive narrative of temptation.
+      </div>
+      <div class="version-desc hidden" id="desc-mine">
+        Bold red visuals representing total surrender to desire. A stunning, vampire-like climax.
+      </div>
+    </div>
+
+    <div class="version-images">
+      <img id="make" class="version-cover" src="images/MAKE VER.png" alt="MAKE Version" />
+      <img id="you" class="version-cover hidden" src="images/YOU VER.png" alt="YOU Version" />
+      <img id="mine" class="version-cover hidden" src="images/MINE VER.png" alt="MINE Version" />
+    </div>
+  </section>
+
+<section class="spotify-embed">
+  <h3>Listen on Spotify</h3>
+  <div class="spotify-frame-wrapper">
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/album/5nskZ8CFMrSNiOrceMHr4B?utm_source=generator&theme=0" 
+      width="100%" height="352" frameBorder="0" allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- 📽️ MV Teaser -->
+  <section class="mv" id="mv">
+    <h3>'BAD DESIRE (WITH OR WITHOUT YOU)' OFFICIAL MV</h3>
+    <br>
+    <div class="custom-video" onclick="loadVideo()">
+      <img src="images/MV COVER.png" alt="ENHYPEN MV Thumbnail" />
+      <div class="play-button">▶</div>
+    </div>
+    <div class="video-wrapper hidden" id="videoContainer">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/a2Zqdo9RbNs?autoplay=1" 
+        title="BAD DESIRE (WITH OR WITHOUT YOU) MV"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+  <section class="fun-zone" id="fun">
+  <h3>✨ A Song For You ✨</h3>
+  <p>Feeling indecisive? Click the button to discover your vibe!</p>
+  <br>
+  <button id="songButton">Pick a Song</button>
+  <div id="randomSong" class="song-result"></div>
+</section>
+
+
+  <!-- 🔚 Footer -->
+  <footer>
+    <p>© 2025 BELIFT LAB • ENHYPEN</p>
+    <p>This website is a fan-made project and is not affiliated with BELIFT LAB or ENHYPEN.All images and videos are the property of their respective owners.</p>
+    <p>Created by Jasmine [Engene 💌]</p>
+  </footer>
+  <button id="scrollTopBtn" title="Back to top">↑</button>
+
+  <!-- 📜 Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
